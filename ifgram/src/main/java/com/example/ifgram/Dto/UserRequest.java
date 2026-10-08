@@ -1,4 +1,4 @@
-package Dto;
+package com.example.ifgram.Dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;

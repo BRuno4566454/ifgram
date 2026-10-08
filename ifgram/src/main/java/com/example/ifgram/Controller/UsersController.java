@@ -1,10 +1,17 @@
 package com.example.ifgram.Controller;
 
+import com.example.ifgram.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("users")
 public class UsersController {
+    public final UserService service;
+
+    public UsersController(UserService service) {
+        this.service = service;
+    }
+
     @GetMapping
     public String getUser() {
         return "get user was called";
