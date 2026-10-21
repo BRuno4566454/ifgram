@@ -1,5 +1,7 @@
 package com.example.ifgram.Controller;
 
+import com.example.ifgram.Dto.UserRequest;
+import com.example.ifgram.Dto.UserResponse;
 import com.example.ifgram.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,16 +25,16 @@ public class UsersController {
         return "chamei o endpoint como um POST!";
     }
 
-
     @DeleteMapping
     public String deleteUser(){
         return "chamei o endpoint como um DELETE!";
     }
 
     @PutMapping
-    public String putUser(){
-        return "chamei o endpoint como um PUT!";
+    public UserResponse UpdateUser(UserRequest request) throws Exception {
+        return service.atualizarUsuario(request);
     }
+
     @PatchMapping
     public String pacthUser() {
         return "chamei o endpoint como um PUT!";
