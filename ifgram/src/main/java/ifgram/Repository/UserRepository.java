@@ -1,6 +1,6 @@
-package com.example.ifgram.Repository;
+package ifgram.Repository;
 
-import org.apache.catalina.User;
+import ifgram.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

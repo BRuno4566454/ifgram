@@ -1,16 +1,16 @@
-package com.example.ifgram.Controller;
+package ifgram.Controller;
 
-import com.example.ifgram.Dto.UserRequest;
-import com.example.ifgram.Dto.UserResponse;
-import com.example.ifgram.service.UserService;
+import ifgram.dto.UserRequest;
+import ifgram.dto.UserResponse;
+import ifgram.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("users")
-public class UsersController {
+public class UserController {
     public final UserService service;
 
-    public UsersController(UserService service) {
+    public UserController(UserService service) {
         this.service = service;
     }
 

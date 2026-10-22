@@ -1,10 +1,12 @@
-package com.example.ifgram.Dto;
+package ifgram.dto;
 
-import org.apache.catalina.User;
 
-public record UserResponse (Long Id, String Nome, String email){
+import ifgram.Model.User;
+
+public record UserResponse(Long id, String nome, String email) {
     public static UserResponse from(User user) {
         return new UserResponse(user.getId(), user.getNome(), user.getEmail());
+
     }
 }
 
